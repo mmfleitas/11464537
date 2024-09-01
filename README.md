@@ -1,9 +1,10 @@
 # SAN-11464537-am
 
 1. Title
+
 Ward Typology for Community Resilience.
 
-2. Description
+3. Description
 
 This project presents a comprehensive analysis and development of a ward-level typology for community resilience in England using a novel approach called Topological Data Analysis Ball Mapper (TDABM), to cluster wards using THE PEOPLES FRAMEWORK as reference for variable selection and dummy variables from identified community resilience characteristics for robustness analysis of the groups of wards within England. The project offers valuable insights into the diversity and complexity of community profiles across England.
 
