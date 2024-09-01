@@ -4,7 +4,7 @@
 
 Ward Typology for Community Resilience.
 
-3. Description
+2. Description
 
 This project presents a comprehensive analysis and development of a ward-level typology for community resilience in England using a novel approach called Topological Data Analysis Ball Mapper (TDABM), to cluster wards using THE PEOPLES FRAMEWORK as reference for variable selection and dummy variables from identified community resilience characteristics for robustness analysis of the groups of wards within England. The project offers valuable insights into the diversity and complexity of community profiles across England.
 
@@ -25,11 +25,11 @@ This research contributes to both fields,the field of community resilience by of
 4. Usage
 To run the analysis, ensure you have the necessary datasets (as outlined in the Data section). The scripts to use are:
 
-    ERP_part1_PreparingData.ipynb - The goal is to prepare the data and create two DF, one for clustering without dummy variables and another one withthem.
+    ERP_part1_PreparingData.ipynb - The goal is to prepare the data and create two DF, one for clustering without dummy variables and another one with them.
     
     ERP_part2_TDABallmapper.ipynb - The goal is to use the Topological Data Analysis Ballmapper (TDABM) to study the typology of wards. 
     
-    ERP_part3_kmeans5.ipynb - The goal is to use the k- means clustering with a k value calculated by the elbow mehotd to study the typology of wards. 
+    ERP_part3_kmeans5.ipynb - The goal is to use the k- means clustering with a k value calculated by the elbow method to study the typology of wards. 
     
     ERP_part4_kmeans21.ipynb - The goal is to use the k- means clustering with a k value calculated by the TDABM to study the typology of wards. 
 
@@ -38,13 +38,13 @@ They are all Open data sources
 
     ERP_part1_PreparingData.ipynb :
 
-    GeoMapa of UK: Wards_December_2022/WD_DEC_2022_UK_BFE.shp - https://www.data.gov.uk/dataset/17b77fff-9318-4bd7-a07b-622549f03dea/wards-december-2022-boundaries-uk-bfe
+    GeoMapa of the United Kingdom (UK): Wards_December_2022/WD_DEC_2022_UK_BFE.shp - https://www.data.gov.uk/dataset/17b77fff-9318-4bd7-a07b-622549f03dea/wards-december-2022-boundaries-uk-bfe
 
     UK postcodes: NSPL21_NOV_2023_UK.csv - https://geoportal.statistics.gov.uk/datasets/b4b8589b4adb40d08e22237f83456d57/about
 
     GP practices information: epraccur.csv - https://digital.nhs.uk/services/organisation-data-service/export-data-files/csv-downloads/gp-and-gp-practice-related-data
 
-    Pharmacies practices information: pharmacy.csv , https://odsdatapoint.digital.nhs.uk/userdefined , select pharmacy
+    Pharmacies practices information: pharmacy.csv , https://odsdatapoint.digital.nhs.uk/userdefined
 
     Primary Schools: primary_schools.csv- https://get-information-schools.service.gov.uk/Establishments/Search?SelectedTab=Establishments&SearchType=EstablishmentAll&SearchType=EstablishmentAll&OpenOnly=true&TextSearchModel.AutoSuggestValue=&f=true&b=1&b=4
 
@@ -83,25 +83,25 @@ They are all Open data sources
 ERP_part1_PreparingData.ipynb
 
     1.The name and code of wards can change from census to census, so we first create a df of wards and wardcodes from the 2021 census to use as a reference  
-    2. We upload the Geodata to create maps of england
-    3. We upload the postcode data of Enlgand to use as an intermediary for merging
-    4. We upload the dataframes the infrasestructure data that does not come from the census data
+    2. We upload the Geodata to create maps of England
+    3. We upload the postcode data of England to use as an intermediary for merging
+    4. We upload the dataframes the infrastructure data that does not come from the census data
     5.We upload the variables that come from the 2021 census data.
-    6. We merge census 2021 variables, do some basic statistics, merge and delete unnecesary columns
+    6. We merge census 2021 variables, do some basic statistics, merge and delete unnecessary columns
     7. We merge the census df with the Infrastructure df, cap outliers, do some basic statistics
     8. Duplicate the DF and add dummy variables bases on community resilience literature
     9. we end up with 2 DF one for clustering without the dummy variables, and another with them
   
 ERP_part2_TDABallmapper.ipynb
 
-    1. We upload wards data, Geodata for mapping uk and both final dataframes created on ERP_part1_PreparingData.ipynb
+    1. We upload wards data, Geodata for mapping UK and both final dataframes created on ERP_part1_PreparingData.ipynb
     2. We scale the features in the dataset df using the StandardScaler
-    3. We Run the ballmapper algorithm and create an itereation of the graph with hue set to all the dummy variables as seen in FIGURE 1 OF THE ERP
+    3. We Run the ballmapper algorithm and create an iteration of the graph with hue set to all the dummy variables as seen in FIGURE 1 OF THE ERP
     4. To the df with the dummy variables we add the number of the balls generated by the TDABM
     5. We create a new df with only the dummy variables and run some statistics
     6. We calculate the mean of the standarized DF and the not standarized DF
-    7. We create graphs and tables to understand the behaviour of the balls in the following order:
-            7.1 TABLE 4 IN ERP
+    7. We create graphs and tables to understand the behavior of the balls in the following order:
+            7.1 TABLE 4 
             7.2 FIGURE 2A
             7.3 FIGURE 2B
             7.4 TABLE 6 
@@ -112,25 +112,26 @@ ERP_part2_TDABallmapper.ipynb
     
 ERP_part3_kmeans5.ipynb
 
-    1. We upload wards data, Geodata for mapping uk and both final dataframes created on ERP_part1_PreparingData.ipynb
+    1. We upload wards data, Geodata for mapping UK and both final dataframes created on ERP_part1_PreparingData.ipynb
     2. We scale the features in the dataset df using the StandardScaler
     3. We run the elbow method and graph it as seen in FIGURE 10 of the ERP
     4. Based on the elbow method result we ran the k-means model
-    5. We visualize the data segmentation by runing the Principal Component Analysis as seen in FIGURE 11.A of the ERP
+    5. We visualize the data segmentation by running the Principal Component Analysis as seen in FIGURE 11.A of the ERP
     6. To the df with the dummy variables we add the number of the clusters generated by the k-means
     7. As a ward can only belong to one cluster, we generate a map of Uk with hue set to cluster as seen in FIGURE 15 OF THE APPENDIX on the ERP
     8. We calculate the same statistics for the overall understanding of the clustering
     
 ERP_part4_kmeans21.ipynb
 
-    1. We upload wards data, Geodata for mapping uk and both final dataframes created on ERP_part1_PreparingData.ipynb
+    1. We upload wards data, Geodata for mapping UK and both final dataframes created on ERP_part1_PreparingData.ipynb
     2. We scale the features in the dataset df using the StandardScaler
     3. Based on the number of balls generated by the TDABM we ran the k-means model
-    5. We visualize the data segmentation by runing the Principal Component Analysis as seen in FIGURE 11.B of the ERP,
+    5. We visualize the data segmentation by running the Principal Component Analysis as seen in FIGURE 11.B of the ERP,
     6. To the df with the dummy variables we add the number of the clusters generated by the k-means
     7. As a ward can only belong to one cluster, we generate a map of Uk with hue set to cluster as seen in FIGURE 16 OF THE APPENDIX on the ERP
     8. We calculate the some statistics and generate the graph seen in FIGURE 12.B of the ERP
 
 
 7.Note:
-This project was developed as an Extended Research Project Report Submitted to the University of Manchester for the Degree of MSc in Data Science in the Faculty of Humanities. 
+This project was developed as an Extended Research Project Report Submitted to the University of Manchester for the Degree of MSc in Data Science in the Faculty of Humanities
+
