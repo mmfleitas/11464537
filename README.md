@@ -5,7 +5,7 @@ Ward Typology for Community Resilience.
 
 2. Description
 
-This project presents a comprehensive analysis and development of a ward-level typology for community resilience in England using a novel approach called Topological Data Analysis Ball Mapper (TDABM), to cluster wards using identified community resilience characteristics for the analysis of the groups of wards within England. The project offers valuable insights into the diversity and complexity of community profiles across England.
+This project presents a comprehensive analysis and development of a ward-level typology for community resilience in England using a novel approach called Topological Data Analysis Ball Mapper (TDABM), to cluster wards using THE PEOPLES FRAMEWORK as reference for variable selection and dummy variables from identified community resilience characteristics for robustness analysis of the groups of wards within England. The project offers valuable insights into the diversity and complexity of community profiles across England.
 
 The typology developed is intended to inform resilience planning and intervention strategies, providing a granular understanding of Englands different community types. The project compares the outcomes of the TDABM with a traditional k-means clustering method, highlighting the strengths and limitations TDABM in capturing the unique characteristics of community resilience.
 
@@ -43,7 +43,7 @@ They are all Open data sources
 
     GP practices information: epraccur.csv - https://digital.nhs.uk/services/organisation-data-service/export-data-files/csv-downloads/gp-and-gp-practice-related-data
 
-    Pharmacies practices information: pharmacy.csv - https://opendata.nhsbsa.net/dataset/consolidated-pharmaceutical-list/resource/60da93f7-3100-4ce1-995f-f2dcfb766949
+    Pharmacies practices information: pharmacy.csv , https://odsdatapoint.digital.nhs.uk/userdefined , select pharmacy
 
     Primary Schools: primary_schools.csv- https://get-information-schools.service.gov.uk/Establishments/Search?SelectedTab=Establishments&SearchType=EstablishmentAll&SearchType=EstablishmentAll&OpenOnly=true&TextSearchModel.AutoSuggestValue=&f=true&b=1&b=4
 
