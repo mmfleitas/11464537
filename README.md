@@ -57,8 +57,6 @@ They are all Open data sources
 
         Sex: TS008_Sex.xlsx
 
-        Number of Household: TS041_Number_of_Households.xlsx
-
         Ethnic group: TS021_1 - Ethnic group.xlsx
 
         Country of Birth: TS004 - Country of birth.xlsx
