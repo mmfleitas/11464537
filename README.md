@@ -19,7 +19,7 @@ This research contributes to both fields,the field of community resilience by of
     4. Usage
     5. Data
     6. Scripts description
-    7.Note
+    7. Note
     
 4. Usage
 To run the analysis, ensure you have the necessary datasets (as outlined in the Data section). The scripts to use are:
